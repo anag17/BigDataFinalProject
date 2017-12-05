@@ -11,14 +11,19 @@ function getInput(){
 }
 
 function getCollege(item) {
-    //var url = base_url+item+'/';
-    window.location.href = "college/";
-    
+    //var collegeInfo = JSON.parse();
+    var results = document.getElementById('map');
+    results.innerHTML = '';
+    document.getElementById('search_results').innerHTML = "College: " + item;
+
 }
 
-// function onSearchCallback(responseText) {
-//     href="http://localhost:8000/college/result/";
-// }
+function getRegion(item) {
+    var results = document.getElementById('map');
+    results.innerHTML = '';
+    document.getElementById('search_results').innerHTML = "Region: " + item;
+
+}
 
  /*
   *  When the user clicks help button, an alert shows up explaining what they can search for
