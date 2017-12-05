@@ -11,10 +11,14 @@ function getInput(){
 }
 
 function getCollege(item) {
-    var url = base_url+item+'/';
-    xmlHttpRequest = new XMLHttpRequest();
-    xmlHttpRequest.open('get', url);
+    //var url = base_url+item+'/';
+    window.location.href = "college/";
+    
 }
+
+// function onSearchCallback(responseText) {
+//     href="http://localhost:8000/college/result/";
+// }
 
  /*
   *  When the user clicks help button, an alert shows up explaining what they can search for
