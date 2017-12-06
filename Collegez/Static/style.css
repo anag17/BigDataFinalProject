@@ -76,3 +76,13 @@ li{
     background-color: lightblue;
     font-weight: bold;
 }
+
+#graph {
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    margin-left: 5px;
+    height: 24px;
+    width: auto;
+    background-color: lightblue;
+}
