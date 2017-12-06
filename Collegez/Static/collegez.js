@@ -11,7 +11,7 @@ function getInput(){
 }
 
 function getCollege(item) {
-    //var collegeInfo = JSON.parse();
+    var collegeInfo = JSON.parse('data.json');
     var results = document.getElementById('map');
     results.innerHTML = '';
     document.getElementById('search_results').innerHTML = "College: " + item;
