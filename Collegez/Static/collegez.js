@@ -13,17 +13,18 @@ function getInput(){
 }
 
 function getCollege(item) {
-<<<<<<< HEAD
-=======
-    //var collegeInfo = JSON.parse('data.json');
->>>>>>> 9b70d84bf8c081c1ebdd5e0308eb1b6a1524d108
     var results = document.getElementById('map');
     results.innerHTML = '';
     //document.getElementById('search_results').innerHTML = collegeData;
 
 }
 
+window.onload = loadCollegeData({{message}}) {
+  alert("Page is loaded");
+}
+
 function loadCollegeData(collegeInfo) {
+  alert("Page is loaded");
   //collegeData = collegeInfo;
   var results = document.getElementById('map');
   results.innerHTML = '';

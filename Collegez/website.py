@@ -9,6 +9,10 @@ import flask
 import pandas as pd
 import re
 from getData import returnData
+import json
+#import collegez-config
+#import psycopg2
+import urllib.request
 
 app = flask.Flask(__name__, static_folder='static', template_folder='templates')
 
