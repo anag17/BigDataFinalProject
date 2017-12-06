@@ -8,8 +8,12 @@
 </head>
 <body onload="loadCollegeData({{message}})">
         <div align="left">
-            <button id="help" onclick="helpAlert()">HELP</button>
+            <button id="home_button" onclick="location.href='http://localhost:8000/'">HOME</button>
         </div>
+
+        <!-- <div align="left">
+            <button id="help" onclick="helpAlert()">HELP</button>
+        </div> -->
 
         <div id="home" align="center">
         <h1 id="title"> Collegez</h1>
@@ -17,6 +21,7 @@
         <p>
             <input id="search_bar" type="text" placeholder=" Search... " onkeypress="onKeyPress(event)"/>
             <button id="search_button" onclick="getInput()">SEARCH</button>
+            <button id="help" onclick="helpAlert()">?</button>
         </p>
         </div>
 
