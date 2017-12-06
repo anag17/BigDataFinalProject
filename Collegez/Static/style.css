@@ -13,7 +13,7 @@ li{
     background-color: blue;
 }*/
 
-#home_button {
+/*#home_button {
     border-style: solid;
     border-color: black;
     border-width: thin;
@@ -23,7 +23,17 @@ li{
     left:20px;
     top:50px;
     background-color: lightblue;
-    position: fixed;
+}*/
+
+#home_button {
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    margin-right: -5px;
+    height: auto;
+    width: auto;
+    font-size: 20pt;
+    background-color: lightblue;
 }
 
 #title {
