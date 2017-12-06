@@ -43,14 +43,35 @@ function loadCollegeData(collegeInfo) {
 function getRegion(item) {
     var results = document.getElementById('map');
     results.innerHTML = '';
-    var collegeList = '';
+    var regionStats = "Region: " + item + "<br>";
+    var collegeList = "Colleges: <br>";
+
+    tuitions = [];
+    tuitionSum = 0;
+    salaries = [];
+    salarySum = 0;
+
+    collegeTypes = [];
     for (key in collegeData) {
       if (collegeData[key]['Region'] == item) {
-        //collegeList += key + '<br>';
-        collegeList += '<button onclick=\"getCollege(\'' + key + '\')\"> '+ key + '</button>' + '<br>';
+        tuitions.push(collegeData[key]['Tuition']);
+        tuitionSum += collegeData[key]['Tuition'];
+        salaries.push(collegeData[key]['Salary']);
+        salarySum += collegeData[key]['Salary'];
+        collegeTypes.push(collegeData[key]['College Type'])
+        if (collegeData[key]['College Type'] == "") {
+          collegeTypes.push(collegeData[key]['College Type 2'])
+        }
+        collegeList += '<p id=\"links\" onclick=\"getCollege(\'' + key + '\')\"> '+ key + '</p>';
+        //collegeList += '<a href=\"/\" onclick = \"getCollege(\'' + key + '\')\"> '+ key + '</a>' + '<br>';
       }
     }
-    document.getElementById('search_results').innerHTML = "Colleges: " + collegeList;
+    regionStats += '<li id=\"Statistics\"> Statistics: ';
+    regionStats += '<ul> Average Tuition: $ ' + Math.round(tuitionSum/tuitions.length) + '</ul>';
+    regionStats += '<ul> Average Salary: $ ' + Math.round(salarySum/salaries.length) + '</ul>';
+    regionStats += '</li>'
+
+    document.getElementById('search_results').innerHTML += regionStats + '<br>' +collegeList;
 
 }
 

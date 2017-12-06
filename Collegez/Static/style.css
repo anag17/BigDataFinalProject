@@ -9,6 +9,11 @@ li{
     margin: 10px;
 }
 
+#links {
+  color: blue;
+  text-decoration: underline;
+}
+
 /*#cali:hover {
     background-color: blue;
 }*/
