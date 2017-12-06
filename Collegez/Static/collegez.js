@@ -15,20 +15,15 @@ function getInput(){
 function getCollege(item) {
     var results = document.getElementById('map');
     results.innerHTML = '';
-    //document.getElementById('search_results').innerHTML = collegeData;
+    //listBody = ''
+    document.getElementById('search_results').innerHTML = collegeData[item]['Region'];
 
-}
-
-window.onload = loadCollegeData({{message}}) {
-  alert("Page is loaded");
 }
 
 function loadCollegeData(collegeInfo) {
-  alert("Page is loaded");
-  //collegeData = collegeInfo;
-  var results = document.getElementById('map');
-  results.innerHTML = '';
-  document.getElementById('search_results').innerHTML = collegeInfo;
+  //var whatever = document.getElementById('search_results');
+  //whatever.innerHTML += collegeInfo;
+  collegeData = collegeInfo;
 }
 
 // function loadJSON(callback) {

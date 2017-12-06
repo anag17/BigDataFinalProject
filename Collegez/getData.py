@@ -39,7 +39,7 @@ for row in salaryData.iterrows():
                 index = colleges.index(college)
                 collegeType2[index] = row[1][1]
             else:
-                collegeType2.append(None)
+                collegeType2.append("")
                 colleges.append(college)
                 tuitions.append(row2[1][4])
                 salaries.append(row[1][2])

@@ -22,7 +22,8 @@ def get_main_page():
     Home page for Collegez
     '''
     collegeInfo = returnData()
-    return flask.render_template('index.html', message = collegeInfo)
+    print (list(collegeInfo.to_dict(orient="index").keys()))
+    return flask.render_template('index.html', message = collegeInfo.to_dict(orient="index"))
 
 @app.route('/college/')
 def get_college_page():
