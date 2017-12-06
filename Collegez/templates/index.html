@@ -5,16 +5,11 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
         <script src="{{ url_for('static', filename='collegez.js') }}" type="text/javascript"></script>
-        <!-- <script src="collegez.js" type="text/javascript"></script> -->
 </head>
 <body onload="loadCollegeData({{message}})">
         <div align="left">
             <button id="home_button" onclick="location.href='http://localhost:8000/'">HOME</button>
         </div>
-
-        <!-- <div align="left">
-            <button id="help" onclick="helpAlert()">HELP</button>
-        </div> -->
 
         <div id="home" align="center">
         <h1 id="title"> Collegez</h1>
