@@ -127,8 +127,7 @@ function getAverageTuitionByRegion(region) {
   *  When the user clicks help button, an alert shows up explaining what they can search for
   */
 function helpAlert() {
-    alert(`Search for a college by name. Click the regions in the map to display
-         region-specific information and list the colleges in that region (that we have data on)`)
+    alert(`Search for a college by name. Click the regions in the map to display region-specific information and list the colleges in that region (that we have data on)`)
 }
 
 /*
