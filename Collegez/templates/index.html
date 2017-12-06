@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
         <script src="{{ url_for('static', filename='collegez.js') }}" type="text/javascript"></script>
 </head>
-<body>
+<body onload="loadCollegeData({{message}})">
         <div align="left">
             <button id="help" onclick="helpAlert()">HELP</button>
         </div>

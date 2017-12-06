@@ -6,6 +6,9 @@
 '''
 import sys
 import flask
+import pandas as pd
+import re
+from getData import returnData
 
 app = flask.Flask(__name__, static_folder='static', template_folder='templates')
 
@@ -14,7 +17,8 @@ def get_main_page():
     '''
     Home page for Collegez
     '''
-    return flask.render_template('index.html')
+    collegeInfo = returnData()
+    return flask.render_template('index.html', message = collegeInfo)
 
 @app.route('/college/')
 def get_college_page():
