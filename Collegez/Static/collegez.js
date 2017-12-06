@@ -15,35 +15,42 @@ function getInput(){
 function getCollege(item) {
     var results = document.getElementById('map');
     results.innerHTML = '';
-    //listBody = ''
-    document.getElementById('search_results').innerHTML = collegeData[item]['Region'];
+    var textBody = ''
+
+    if (item == 'list') {
+      for (key in collegeData) {
+        textBody += key + '<br>';
+      }
+    }
+    else {
+      textBody += 'College: ' + item + '<br>';
+      textBody += 'Region: ' + collegeData[item]['Region'] + '<br>';
+      textBody += 'Type of School: ' + collegeData[item]['College Type'] + '<br>';
+      if (collegeData[item]['College Type 2'] != "") {
+        textBody += 'Secondary Type of School: ' + collegeData[item]['College Type 2'] + '<br>';
+      }
+      textBody += 'Tuition: $' + collegeData[item]['Tuition'] + '<br>';
+      textBody += 'Salary: $' + collegeData[item]['Salary'];
+    }
+    document.getElementById('search_results').innerHTML = textBody;
 
 }
 
 function loadCollegeData(collegeInfo) {
-  //var whatever = document.getElementById('search_results');
-  //whatever.innerHTML += collegeInfo;
   collegeData = collegeInfo;
 }
-
-// function loadJSON(callback) {
-//
-//     var xobj = new XMLHttpRequest();
-//     xobj.overrideMimeType("application/json");
-//     xobj.open('GET', '../data.json', true); // Replace 'my_data' with the path to your file
-//     xobj.onreadystatechange = function () {
-//           if (xobj.readyState == 4 && xobj.status == "200") {
-//             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-//             callback(xobj.responseText);
-//           }
-//     };
-//     xobj.send(null);
-//  }
 
 function getRegion(item) {
     var results = document.getElementById('map');
     results.innerHTML = '';
-    document.getElementById('search_results').innerHTML = "Region: " + item;
+    var collegeList = '';
+    for (key in collegeData) {
+      if (collegeData[key]['Region'] == item) {
+        //collegeList += key + '<br>';
+        collegeList += '<button onclick=\"getCollege(\'' + key + '\')\"> '+ key + '</button>' + '<br>';
+      }
+    }
+    document.getElementById('search_results').innerHTML = "Colleges: " + collegeList;
 
 }
 
