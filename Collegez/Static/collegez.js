@@ -92,7 +92,12 @@ function showGraph() {
     var results = document.getElementById('map');
     results.innerHTML = '';
     var regionStats = "Graphs: <br>";
-    var graphs = "<img src=\"../static/images/tuitionSalary.jpg\" width=\"500\" height=\"300\">";
+    var graphs = "<img src=\"../static/images/tuitionSalary.jpg\" width=\"500\" height=\"300\"> <br>";
+    graphs += "<img src=\"../static/images/tuitionRegion.jpg\" width=\"500\" height=\"400\">";
+    graphs += "<img src=\"../static/images/salaryRegion.jpg\" width=\"500\" height=\"400\"> + <br>";
+    graphs += "<img src=\"../static/images/SalaryCollegeType.jpg\" width=\"500\" height=\"400\">";
+    graphs += "<img src=\"../static/images/TuitionCollegeType.jpg\" width=\"500\" height=\"400\"> + <br>";
+
     document.getElementById('search_results').innerHTML = graphs;
 
 }
